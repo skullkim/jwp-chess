@@ -5,7 +5,8 @@ public class GameDto {
     private int id;
     private String name;
 
-    public GameDto(){}
+    public GameDto() {
+    }
 
     public GameDto(int id, String name) {
         this.id = id;

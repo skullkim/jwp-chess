@@ -31,7 +31,7 @@ public class PieceResponse {
         return PieceType.valueOf(pieceType.toUpperCase(Locale.ROOT))
                 .createPiece(Color.valueOf(color.toUpperCase(Locale.ROOT)));
     }
-    
+
     public String getPosition() {
         return position;
     }

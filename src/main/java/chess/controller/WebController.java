@@ -20,7 +20,8 @@ public class WebController {
     }
 
     @GetMapping("/game")
-    public RedirectView redirectGame(@RequestParam String gameName, @RequestParam String password, HttpSession session) {
+    public RedirectView redirectGame(@RequestParam String gameName, @RequestParam String password,
+                                     HttpSession session) {
         final int gameId = chessService.getGameId(gameName, password);
         return new RedirectView("/game/" + gameId);
     }

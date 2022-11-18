@@ -1,147 +1,147 @@
 body {
-  background: lavender;
-  font-family: 'BMHANNAPro', monospace;
+    background: lavender;
+    font-family: 'BMHANNAPro', monospace;
 }
 
 @font-face {
-  font-family: 'BMHANNAPro';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_seven@1.0/BMHANNAPro.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
+    font-family: 'BMHANNAPro';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_seven@1.0/BMHANNAPro.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
 
 .explanation {
-  margin: 1vmin;
-  font-size: 3vmin;
+    margin: 1vmin;
+    font-size: 3vmin;
 }
 
 input {
-  margin: 2vmin;
-  font-size: 3vmin;
-  font-family: 'BMHANNAPro', monospace;
+    margin: 2vmin;
+    font-size: 3vmin;
+    font-family: 'BMHANNAPro', monospace;
 }
 
 .submit {
-  border: none;
+    border: none;
 }
 
 .hidden {
-  display: none !important;
+    display: none !important;
 }
 
 #contents {
-  background: white;
-  width: 100vmin;
-  height: 95vmin;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 0 auto;
-  border-radius: 30px;
+    background: white;
+    width: 100vmin;
+    height: 95vmin;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    border-radius: 30px;
 }
 
 #title-bar {
-  margin: 2vmin;
-  font-size: 7vmin;
+    margin: 2vmin;
+    font-size: 7vmin;
 }
 
 #buttons {
-  padding: 0 1vmin;
-  display: flex;
-  flex-direction: row;
+    padding: 0 1vmin;
+    display: flex;
+    flex-direction: row;
 }
 
 .button {
-  cursor: pointer;
-  background: lavender;
-  padding: 1vmin 2vmin;
-  font-size: 2vmin;
-  border-radius: 30px;
-  margin: 0 1vmin;
+    cursor: pointer;
+    background: lavender;
+    padding: 1vmin 2vmin;
+    font-size: 2vmin;
+    border-radius: 30px;
+    margin: 0 1vmin;
 }
 
 #chess-section {
-  border: 1px solid;
-  display: block;
-  margin: 1vmin auto;
+    border: 1px solid;
+    display: block;
+    margin: 1vmin auto;
 }
 
 div {
-  position: relative;
+    position: relative;
 }
 
 .row {
 }
 
 .cell {
-  border: 1px solid;
-  width: 8vmin;
-  height: 8vmin;
-  float: left;
+    border: 1px solid;
+    width: 8vmin;
+    height: 8vmin;
+    float: left;
 }
 
 .piece-image {
-  width: 8vmin;
-  height: 8vmin;
+    width: 8vmin;
+    height: 8vmin;
 }
 
 .selected {
-  background-color: #cadebf;
+    background-color: #cadebf;
 }
 
 .status {
-  font-size: 3vmin;
+    font-size: 3vmin;
 }
 
 #game-id-form {
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 
 #modal {
-  visibility: hidden;
+    visibility: hidden;
 }
 
 #modal__box {
-  height: 400px;
-  width: 500px;
-  background-color: white;
-  border: solid 4px lavender;
-  box-shadow: 10px 5px 5px lavender;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-left: -250px;
-  margin-top: -200px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    height: 400px;
+    width: 500px;
+    background-color: white;
+    border: solid 4px lavender;
+    box-shadow: 10px 5px 5px lavender;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -250px;
+    margin-top: -200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #modal__games {
-  height: 300px;
-  width: 450px;
-  border: solid 2px lavender;
-  overflow: scroll;
+    height: 300px;
+    width: 450px;
+    border: solid 2px lavender;
+    overflow: scroll;
 }
 
 .box__close-button {
-  align-self: end;
+    align-self: end;
 }
 
 #box__close-button:hover {
-  cursor: grab;
+    cursor: grab;
 }
 
 #box__title {
-  margin-top: 0;
+    margin-top: 0;
 }
 
 .games__game {
-  width: 100%;
-  height: 20px;
-  border-bottom: solid 2px #cadebf;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+    width: 100%;
+    height: 20px;
+    border-bottom: solid 2px #cadebf;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }

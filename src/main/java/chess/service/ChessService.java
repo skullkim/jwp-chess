@@ -143,41 +143,37 @@ public class ChessService {
     }
 
     public boolean deleteGameAfterCheckingPassword(long gameId, String password) {
-<<<<<<< HEAD
-        if (isFulfillDeleteCondition(gameId, password)) {
-=======
-        final Room room = new Room(gameId, password);
-        if (isFulfillDeleteCondition(room)) {
->>>>>>> step2
-            gameDao.delete(gameId);
-            return true;
+            final Room room = new Room(gameId, password);
+            if (isFulfillDeleteCondition(room)) {
+                gameDao.delete(gameId);
+                return true;
+            }
+            return false;
         }
-        return false;
-    }
 
-    private boolean isFulfillDeleteCondition(final Room room) {
-        final long gameId = room.getId();
-        final String existedPassword = gameDao.findPassword(gameId);
-        Optional<GameState> gameState = gameDao.load(room.getId());
-        return room.checkPassword(existedPassword)
-                && gameState.isPresent()
-                && gameState.get() == GameState.FINISHED;
-    }
+        private boolean isFulfillDeleteCondition ( final Room room){
+            final long gameId = room.getId();
+            final String existedPassword = gameDao.findPassword(gameId);
+            Optional<GameState> gameState = gameDao.load(room.getId());
+            return room.checkPassword(existedPassword)
+                    && gameState.isPresent()
+                    && gameState.get() == GameState.FINISHED;
+        }
 
-    private Position parseStringToPosition(final String rawPosition) {
-        final String[] separatedPosition = rawPosition.split("");
-        final Column column = Column.from(separatedPosition[ROW_INDEX]);
-        final Row row = Row.from(separatedPosition[COLUMN_INDEX]);
-        return new Position(column, row);
-    }
+        private Position parseStringToPosition ( final String rawPosition){
+            final String[] separatedPosition = rawPosition.split("");
+            final Column column = Column.from(separatedPosition[ROW_INDEX]);
+            final Row row = Row.from(separatedPosition[COLUMN_INDEX]);
+            return new Position(column, row);
+        }
 
-    public List<GameDto> findAllGames() {
-        return gameDao.findAll();
-    }
+        public List<GameDto> findAllGames () {
+            return gameDao.findAll();
+        }
 
-    public boolean checkPassword(long gameId, String password) {
-        final String existedPassword = gameDao.findPassword(gameId);
-        final Room room = new Room(gameId, password);
-        return room.checkPassword(existedPassword);
+        public boolean checkPassword ( long gameId, String password){
+            final String existedPassword = gameDao.findPassword(gameId);
+            final Room room = new Room(gameId, password);
+            return room.checkPassword(existedPassword);
+        }
     }
-}
